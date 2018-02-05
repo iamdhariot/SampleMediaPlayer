@@ -6,33 +6,67 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnPlay,btnPause;
+    /**
+     *  main_layout stuffs declaration
+     * */
+    private Button btnPlay,btnPause,btnSkip,btnReset;
+    private MediaPlayer mediaPlayer;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.ncs_earth);
 
+
+        /**
+         *  reference
+         * */
         btnPlay = (Button)findViewById(R.id.btnPlay);
         btnPause = (Button)findViewById(R.id.btnPause);
-        btnPlay.setOnClickListener(new View.OnClickListener() {
+        btnSkip = (Button)findViewById(R.id.btnSkip);
+        btnReset = (Button)findViewById(R.id.btnReset);
 
-            @Override
-            public void onClick(View v) {
 
+        /**
+         * MediaPlayer reference
+         * */
+        mediaPlayer = MediaPlayer.create(this,R.raw.ncs_earth);
+
+        btnPlay.setOnClickListener(this);
+        btnPause.setOnClickListener(this);
+        btnSkip.setOnClickListener(this);
+
+        btnReset.setOnClickListener(this);
+
+    }
+
+    /**
+     * Btn onClick events
+     * */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnPlay:
                 mediaPlayer.start();
-            }
-        });
 
-        btnPause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer.pause();
+                break;
 
-            }
-        });
+            case R.id.btnPause:
+                mediaPlayer.stop();
+                break;
+            case R.id.btnSkip:
+                mediaPlayer.seekTo(25000);
+                break;
+
+            case R.id.btnReset:
+                mediaPlayer.reset();
+                break;
+
+        }
+
 
     }
 }
