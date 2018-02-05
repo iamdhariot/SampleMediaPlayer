@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnReset.setOnClickListener(this);
 
     }
-
     /**
      * Btn onClick events
      * */
