@@ -120,8 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              mediaPlayer.start();
              btnPlay.setVisibility(View.GONE);
              btnPause.setVisibility(View.VISIBLE);
-
-                 break;
+             break;
 
             case R.id.btnNext:
 
