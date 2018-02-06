@@ -6,30 +6,66 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="in.blogspot.iamdhariot.samplemediaplayer.MainActivity">
-<Button
-    android:id="@+id/btnPlay"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Play"
-    />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+
+
+        />
+    <TextView
+        android:id="@+id/songName"
+        android:maxLines="1"
+        android:rotationX="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        android:text="Song Name"
+        />
+    <LinearLayout
+
+       android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_skip_previous_black_24dp"
+
+            />
+
+        <Button
+            android:background="@drawable/ic_play_circle_outline_black_24dp"
+            android:visibility="visible"
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            />
+
 
     <Button
+        android:visibility="gone"
         android:id="@+id/btnPause"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pause"
+       android:background="@drawable/ic_pause_circle_outline_black_24dp"
         />
     <Button
-        android:id="@+id/btnSkip"
-        android:layout_width="match_parent"
+        android:id="@+id/btnSipNext"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skip"
-        />
-    <Button
-        android:id="@+id/btnReset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reset"
+        android:background="@drawable/ic_skip_next_black_24dp"
+
         />
 
+    </LinearLayout>
 </LinearLayout>

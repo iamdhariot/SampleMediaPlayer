@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnPause:
-                mediaPlayer.stop();
+                mediaPlayer.pause();
                 break;
             case R.id.btnSkip:
                 mediaPlayer.seekTo(25000);
