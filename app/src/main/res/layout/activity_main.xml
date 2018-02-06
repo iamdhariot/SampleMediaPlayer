@@ -3,23 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/layout"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="in.blogspot.iamdhariot.samplemediaplayer.MainActivity">
+
     <ImageView
+        android:id="@+id/songImg"
         android:layout_width="wrap_content"
         android:layout_height="460dp"
 
 
         android:scaleType="centerCrop"
-        android:src="@drawable/image"
 
 
         />
     <TextView
         android:id="@+id/songName"
         android:maxLines="1"
-        android:rotationX="true"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -29,10 +31,10 @@
         />
     <LinearLayout
 
-       android:gravity="center"
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btnPrevious"
@@ -46,8 +48,8 @@
             android:background="@drawable/ic_play_circle_outline_black_24dp"
             android:visibility="visible"
             android:id="@+id/btnPlay"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
 
             />
 
@@ -55,12 +57,12 @@
     <Button
         android:visibility="gone"
         android:id="@+id/btnPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
        android:background="@drawable/ic_pause_circle_outline_black_24dp"
         />
     <Button
-        android:id="@+id/btnSipNext"
+        android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_skip_next_black_24dp"
